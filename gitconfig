@@ -1,0 +1,6 @@
+
+[core]
+	excludesfile = /home/sam/.gitignore_global
+[user]
+	name = Sam Agnew
+	email = sagnew@eden.rutgers.edu

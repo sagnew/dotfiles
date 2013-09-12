@@ -3,9 +3,9 @@
 cd "${HOME}"
 
 # Link in files, replacing whatever's already there.
-ln -fs "${HOME}/dotfiles/git/gitconfig"     "${HOME}/.gitconfig"
-ln -fs "${HOME}/dotfiles/git/gitignore_global"     "${HOME}/.gitignore_global"
-ln -fs "${HOME}/dotfiles/vim/vimrc"         "${HOME}/.vimrc"
+ln -fs "${HOME}/Code/dotfiles/git/gitconfig"     "${HOME}/.gitconfig"
+ln -fs "${HOME}/Code/dotfiles/git/gitignore_global"     "${HOME}/.gitignore_global"
+ln -fs "${HOME}/Code/dotfiles/vim/vimrc"         "${HOME}/.vimrc"
 
 mkdir -p "${HOME}/.vim/bundle"
 git clone git@github.com:gmarik/vundle.git "${HOME}/.vim/bundle/vundle"

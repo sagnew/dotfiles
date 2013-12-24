@@ -1,9 +1,5 @@
-"simple vimrc that I give to people just starting to use Vim."
-
-
 "Turns on syntax highlighting"
 syntax on
-
 
 "Basic settings"
 set nocompatible "Fixes old Vi bugs"
@@ -21,9 +17,6 @@ set smartindent "Remembers previous indent when creating new lines"
 set cursorline
 set cursorcolumn
 set t_Co=256 "Sets terminal to use 256 colors"
-
-"Sets colorscheme to elflord"
-colorscheme elflord
 
 
 "Search settings"
@@ -44,30 +37,57 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
-"Filetype settings"
-filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
-
-"Allow crosshair cursor highlighting."
-hi CursorLine   cterm=NONE ctermbg=235
-hi CursorColumn cterm=NONE ctermbg=235
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
 au FileType make setlocal noexpandtab
 
 "Gets rid of trailing whitespace"
 autocmd BufWritePre * :%s/\s\+$//e
 
-
 "Vundle stuff"
 "
-set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Setting up Vundle - the vim plugin bundler
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+    endif
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    Bundle 'gmarik/vundle'
+    "Add bundles here
+    " Awesome syntax highlighting
+    Bundle 'Syntastic'
+    " Cool colorscheme
+    Bundle 'altercation/vim-colors-solarized'
+    " Gnarly git stuff
+    Bundle 'https://github.com/tpope/vim-fugitive'
+    " coffee script plugin
+    Bundle 'kchmck/vim-coffee-script'
+    " Better file browser
+    Bundle 'scrooloose/nerdtree'
+    " Automatically sort python imports
+    Bundle 'fisadev/vim-isort'
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kchmck/vim-coffee-script'
+    "...All your other bundles...
+    if iCanHazVundle == 0
+        echo "Installing Bundles, please ignore key map error messages"
+        echo ""
+        :BundleInstall
+    endif
+" Setting up Vundle - the vim plugin bundler end
 
-filetype plugin indent on
+"Filetype settings"
+filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
+
+" Set colorscheme
+colorscheme elflord
+
+"Allow crosshair cursor highlighting."
+hi CursorLine   cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

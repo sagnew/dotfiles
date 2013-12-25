@@ -72,6 +72,8 @@ filetype off                   " required!
     Bundle 'scrooloose/nerdtree'
     " Automatically sort python imports
     Bundle 'fisadev/vim-isort'
+    " XML/HTML tags navigation
+    Bundle 'matchit.zip'
 
     "...All your other bundles...
     if iCanHazVundle == 0

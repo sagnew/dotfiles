@@ -81,7 +81,7 @@ filetype off                   " required!
     " Yank history navigation
     Bundle 'YankRing.vim'
 
-    "...All your other bundles...
+    "...All other bundles...
     if iCanHazVundle == 0
         echo "Installing Bundles, please ignore key map error messages"
         echo ""
@@ -93,7 +93,9 @@ filetype off                   " required!
 filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
 
 " Set colorscheme
-colorscheme elflord
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "Allow crosshair cursor highlighting."
 hi CursorLine   cterm=NONE ctermbg=235

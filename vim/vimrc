@@ -93,11 +93,12 @@ filetype off                   " required!
 filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
 
 " Set colorscheme
-set background=dark
-let g:solarized_termcolors=256
+set background=light
 colorscheme solarized
+" uncomment this line depending on terminal colors
+" let g:solarized_termcolors=256
 
 "Allow crosshair cursor highlighting."
-hi CursorLine   cterm=NONE ctermbg=235
-hi CursorColumn cterm=NONE ctermbg=235
+hi CursorLine   cterm=NONE ctermbg=255
+hi CursorColumn cterm=NONE ctermbg=255
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

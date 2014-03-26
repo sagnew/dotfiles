@@ -74,12 +74,12 @@ filetype off                   " required!
     Bundle 'fisadev/vim-isort'
     " XML/HTML tags navigation
     Bundle 'matchit.zip'
+    " Yank history navigation
+    Bundle 'YankRing.vim'
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
     " Bundle 'Valloric/YouCompleteMe'
-    " Yank history navigation
-    Bundle 'YankRing.vim'
 
     "...All other bundles...
     if iCanHazVundle == 0

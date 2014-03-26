@@ -76,8 +76,8 @@ filetype off                   " required!
     Bundle 'matchit.zip'
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
-    " if necessary
-    Bundle 'Valloric/YouCompleteMe'
+    " if necessary. Uncomment the next line in order to actually use YCM
+    " Bundle 'Valloric/YouCompleteMe'
     " Yank history navigation
     Bundle 'YankRing.vim'
 
@@ -94,10 +94,9 @@ filetype plugin indent on "Turns on plugin/indentation support for specific file
 
 " Set colorscheme
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
 
 "Allow crosshair cursor highlighting."
-hi CursorLine   cterm=NONE ctermbg=235
-hi CursorColumn cterm=NONE ctermbg=235
+hi CursorLine   cterm=NONE ctermbg=0
+hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

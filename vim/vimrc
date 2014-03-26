@@ -95,6 +95,8 @@ filetype plugin indent on "Turns on plugin/indentation support for specific file
 " Set colorscheme
 set background=dark
 colorscheme solarized
+" uncomment this line depending on terminal colors
+" let g:solarized_termcolors=256
 
 "Allow crosshair cursor highlighting."
 hi CursorLine   cterm=NONE ctermbg=0

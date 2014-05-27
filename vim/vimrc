@@ -99,6 +99,6 @@ colorscheme solarized
 " let g:solarized_termcolors=256
 
 "Allow crosshair cursor highlighting."
-hi CursorLine   cterm=NONE ctermbg=0
-hi CursorColumn cterm=NONE ctermbg=0
+hi CursorLine   cterm=NONE ctermbg=255
+hi CursorColumn cterm=NONE ctermbg=255
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

@@ -7,10 +7,10 @@ set backspace=indent,eol,start "Makes backspace work"
 set history=500 "Sets undo history size"
 set ruler "Sets up status bar"
 set number "Turns on line numbering"
-set tabstop=4 "Sets indent size of tabs"
-set softtabstop=4 "Soft tabs"
+set tabstop=2 "Sets indent size of tabs"
+set softtabstop=2 "Soft tabs"
 set expandtab "Tabs suck. Spaces rule."
-set shiftwidth=4 "Sets auto-indent size"
+set shiftwidth=2 "Sets auto-indent size"
 set laststatus=2 "Always keeps the status bar active"
 set autoindent "Turns on auto-indenting"
 set smartindent "Remembers previous indent when creating new lines"
@@ -93,12 +93,12 @@ filetype off                   " required!
 filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
 
 " Set colorscheme
-set background=dark
+set background=light
 colorscheme solarized
 " uncomment this line depending on terminal colors
 " let g:solarized_termcolors=256
 
 "Allow crosshair cursor highlighting."
-hi CursorLine   cterm=NONE ctermbg=0
-hi CursorColumn cterm=NONE ctermbg=0
+hi CursorLine   cterm=NONE ctermbg=255
+hi CursorColumn cterm=NONE ctermbg=255
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

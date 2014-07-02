@@ -29,6 +29,8 @@ set smartcase "Unless you put some caps in your search term"
 "Key mappings"
 inoremap jj <Esc>`^
 set pastetoggle=<F2>
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 
 "Window movement mappings"

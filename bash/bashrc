@@ -104,3 +104,6 @@ fi
 
 # My own non default additions
 set -o vi
+
+# Fix tmux colors
+alias tmux="TERM=screen-256color-bce tmux"

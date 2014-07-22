@@ -12,8 +12,8 @@ bind r source-file ~/.tmux.conf
 set -g base-index 1
 
 # colors
-set -g default-terminal "xterm"
+set -g default-terminal "screen-256color"
 
 # unicode
-setw -g utf8 on
+set -g utf8 on
 set -g status-utf8 on

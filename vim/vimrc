@@ -30,7 +30,8 @@ set smartcase "Unless you put some caps in your search term"
 "Key mappings"
 inoremap jj <Esc>`^
 set pastetoggle=<F2>
-nnoremap <CR> :noh<CR><CR> "This unsets the 'last search pattern' register by hitting return
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk

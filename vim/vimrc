@@ -11,8 +11,9 @@ set tabstop=2 "Sets indent size of tabs"
 set softtabstop=2 "Soft tabs"
 set expandtab "Tabs suck. Spaces rule."
 set shiftwidth=2 "Sets auto-indent size"
-set laststatus=2 "Always keeps the status bar active"
+set laststatus=4 "Always keeps the status bar active"
 set autoindent "Turns on auto-indenting"
+set copyindent "Copy the previous indentation on autoindenting"
 set smartindent "Remembers previous indent when creating new lines"
 set cursorline
 set cursorcolumn
@@ -29,6 +30,10 @@ set smartcase "Unless you put some caps in your search term"
 "Key mappings"
 inoremap jj <Esc>`^
 set pastetoggle=<F2>
+nnoremap <CR> :noh<CR><CR> "This unsets the 'last search pattern' register by hitting return
+nnoremap ; :
+nnoremap j gj
+nnoremap k gk
 
 
 "Window movement mappings"

@@ -67,7 +67,8 @@ filetype off                   " required!
     call vundle#rc()
     Bundle 'gmarik/vundle'
     "Add bundles here
-    " Awesome syntax highlighting
+
+    " Awesome syntax checking
     Bundle 'Syntastic'
     " Cool colorscheme
     Bundle 'altercation/vim-colors-solarized'
@@ -83,6 +84,8 @@ filetype off                   " required!
     Bundle 'matchit.zip'
     " Yank history navigation
     Bundle 'YankRing.vim'
+    " Syntax/style wrapper for python
+    Bundle 'nvie/vim-flake8'
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM

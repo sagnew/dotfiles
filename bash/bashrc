@@ -192,5 +192,5 @@ function parse_git_dirty {
     fi
 }
 
-export PS1="\[\e[32;40m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[32;40m\]:\[\e[m\]\[\e[34;40m\]\w\[\e[m\]\[\e[31;40m\]\`parse_git_branch\`\[\e[m\]\[\e[32m\]\\$\[\e[m\] "
+export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\] "
 # End EZPrompt

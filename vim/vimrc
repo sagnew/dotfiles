@@ -18,25 +18,25 @@ set smartindent "Remembers previous indent when creating new lines"
 set cursorline
 set cursorcolumn
 set t_Co=256 "Sets terminal to use 256 colors"
-
-au BufNewFile,BufRead *.js,*.coffee :setlocal sw=2 ts=2 sts=2 " Two spaces for js/coffee files "
-
-"Search settings"
-set hlsearch "Highlights search terms"
-set showmatch "Highlights matching parentheses"
-set ignorecase "Ignores case when searching"
-set smartcase "Unless you put some caps in your search term"
-
+let mapleader=" "
+set pastetoggle=<leader>p
 
 "Key mappings"
+
 inoremap jj <Esc>`^
-set pastetoggle=<F2>
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :noh<CR>
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>t :tabnew<space>
 
+"Search settings"
+set hlsearch "Highlights search terms"
+set incsearch "Highlights search terms as you type them"
+set showmatch "Highlights matching parentheses"
+set ignorecase "Ignores case when searching"
+set smartcase "Unless you put some caps in your search term"
 
 "Window movement mappings"
 nnoremap <c-h> <c-w>h
@@ -44,6 +44,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
+au BufNewFile,BufRead *.js,*.coffee :setlocal sw=2 ts=2 sts=2 " Two spaces for js/coffee files "
 au FileType make setlocal noexpandtab
 
 "Gets rid of trailing whitespace"
@@ -79,7 +80,7 @@ filetype off                   " required!
     " Better file browser
     Bundle 'scrooloose/nerdtree'
     " Automatically sort python imports
-    Bundle 'fisadev/vim-isort'
+    " Bundle 'fisadev/vim-isort'
     " XML/HTML tags navigation
     Bundle 'matchit.zip'
     " Yank history navigation
@@ -102,13 +103,13 @@ filetype off                   " required!
 "Filetype settings"
 filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
 
-" Set colorscheme
-set background=dark
-colorscheme solarized
-" uncomment this line depending on terminal colors
-" let g:solarized_termcolors=256
-
 "Allow crosshair cursor highlighting."
 hi CursorLine   cterm=NONE ctermbg=0
 hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" Set colorscheme
+set background=light
+colorscheme solarized
+" uncomment this line depending on terminal colors
+" let g:solarized_termcolors=256

@@ -18,7 +18,7 @@ set smartindent "Remembers previous indent when creating new lines"
 set cursorline
 set cursorcolumn
 set t_Co=256 "Sets terminal to use 256 colors"
-let mapleader=" "
+let mapleader=","
 set pastetoggle=<leader>p
 
 "Key mappings"
@@ -109,7 +109,7 @@ hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Set colorscheme
-set background=light
+set background=dark
 colorscheme solarized
 " uncomment this line depending on terminal colors
 " let g:solarized_termcolors=256

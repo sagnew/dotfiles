@@ -115,7 +115,7 @@ hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Set colorscheme
-set background=light
+set background=dark
 colorscheme solarized
 " uncomment this line depending on terminal colors
 " let g:solarized_termcolors=256

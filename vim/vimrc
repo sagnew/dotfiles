@@ -43,7 +43,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
-au BufNewFile,BufRead *.js,*.coffee :setlocal sw=2 ts=2 sts=2 " Two spaces for js/coffee files "
+au BufNewFile,BufRead *.js,*.jsx*,*.coffee,*.rb,*.html,*.xml :setlocal sw=2 ts=2 sts=2 " Two spaces for js/coffee files "
 au FileType make setlocal noexpandtab
 
 "Gets rid of trailing whitespace"
@@ -90,6 +90,8 @@ filetype off                   " required!
     Plugin 'mattn/emmet-vim'
     " Much better status/tabline
     Plugin 'bling/vim-airline'
+    " Syntax highlighting for Swift
+    Plugin 'keith/swift.vim'
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
@@ -106,6 +108,10 @@ filetype off                   " required!
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 
+" Syntastic stuff
+let g:syntastic_check_on_open=0
+let g:syntastic_enable_signs=1
+
 "Filetype settings"
 filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
 
@@ -115,7 +121,8 @@ hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Set colorscheme
-set background=dark
+set background=light
 colorscheme solarized
 " uncomment this line depending on terminal colors
 " let g:solarized_termcolors=256
+set nowrap

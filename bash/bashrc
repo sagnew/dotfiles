@@ -85,6 +85,13 @@ alias l='ls -CF'
 # Python 3
 alias py3='python3'
 
+# Use IPython in virtual envs correctly
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+
+#Virtualenv wrapper
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -99,6 +106,7 @@ alias ...='cd ../../'
 alias cl='clear'
 alias qfind="find . -name " # I hate the find command
 alias myip='curl ip.appspot.com' # Public facing IP Address
+alias fixbrew='sudo chown -R `whoami`:admin'
 
 #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
 #           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec

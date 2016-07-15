@@ -20,9 +20,11 @@ set cursorcolumn
 set t_Co=256 "Sets terminal to use 256 colors"
 let mapleader=","
 set pastetoggle=<leader>p
+set wrap
 
 "Key mappings"
 inoremap jj <Esc>`^
+inoremap jk <Esc>`^
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR>
 nnoremap ; :
@@ -49,7 +51,11 @@ au FileType make setlocal noexpandtab
 "Gets rid of trailing whitespace"
 autocmd BufWritePre * :%s/\s\+$//e
 
-"Vundle stuff"
+" Macros
+" Changes 'varName' to 'this.varName = varName;' from beginning of variable.
+let @t = '^ithis.jjywA = ;jjP'
+
+" Vundle stuff"
 "
 filetype off                   " required!
 
@@ -92,6 +98,8 @@ filetype off                   " required!
     Plugin 'bling/vim-airline'
     " Syntax highlighting for Swift
     Plugin 'keith/swift.vim'
+    " Syntax highlighting for typescript
+    Plugin 'leafgarland/typescript-vim'
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
@@ -113,9 +121,9 @@ let g:syntastic_check_on_open=0
 let g:syntastic_enable_signs=1
 
 "Filetype settings"
-filetype plugin indent on "Turns on plugin/indentation support for specific filetypes"
+filetype plugin indent on " Turns on plugin/indentation support for specific filetypes
 
-"Allow crosshair cursor highlighting."
+" Allow crosshair cursor highlighting.
 hi CursorLine   cterm=NONE ctermbg=0
 hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

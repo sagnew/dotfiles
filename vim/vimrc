@@ -31,6 +31,7 @@ nnoremap ; :
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>t :tabnew<space>
+map <C-]> :YcmCompleter GoToImprecise<CR>
 
 "Search settings"
 set hlsearch "Highlights search terms"
@@ -74,6 +75,8 @@ filetype off                   " required!
     Plugin 'gmarik/vundle'
     "Add bundles here
 
+    " let Vundle manage Vundle
+    Plugin 'VundleVim/Vundle.vim'
     " Awesome syntax checking
     Plugin 'Syntastic'
     " Cool colorscheme
@@ -103,7 +106,7 @@ filetype off                   " required!
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
-    " Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
 
     "...All other bundles...
     if iCanHazVundle == 0

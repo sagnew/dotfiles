@@ -107,6 +107,8 @@ filetype off                   " required!
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
     Plugin 'Valloric/YouCompleteMe'
+    " es6 syntax highlighting
+    Plugin 'isRuslan/vim-es6'
 
     "...All other bundles...
     if iCanHazVundle == 0

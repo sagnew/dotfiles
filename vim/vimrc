@@ -53,8 +53,15 @@ au FileType make setlocal noexpandtab
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Macros
+
 " Changes 'varName' to 'this.varName = varName;' from beginning of variable.
 let @t = '^ithis.jjywA = ;jjP'
+
+" Copies the currently selected text to the system clipboard (OSX)
+let @c = ':w !pbcopy'
+
+" Opens my vimrc for editing.
+let @e = ':tabnew ~/.vimrc'
 
 " Vundle stuff"
 "
@@ -78,7 +85,7 @@ filetype off                   " required!
     " let Vundle manage Vundle
     Plugin 'VundleVim/Vundle.vim'
     " Awesome syntax checking
-    Plugin 'Syntastic'
+    " Plugin 'Syntastic'
     " Cool colorscheme
     Plugin 'altercation/vim-colors-solarized'
     " Gnarly git stuff
@@ -106,7 +113,7 @@ filetype off                   " required!
     " Kick ass autocompletion
     " See https://news.ycombinator.com/item?id=5169062 for more instructions
     " if necessary. Uncomment the next line in order to actually use YCM
-    Plugin 'Valloric/YouCompleteMe'
+    " Plugin 'Valloric/YouCompleteMe'
     " es6 syntax highlighting
     Plugin 'isRuslan/vim-es6'
 

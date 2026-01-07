@@ -88,8 +88,10 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+  alias vi='vim'
 else
   export EDITOR='nvim'
+  alias vi='nvim'
 fi
 
 # Compilation flags
@@ -143,7 +145,6 @@ alias cl='clear'
 alias qfind="find . -name " # I hate the find command
 alias myip='curl ip.appspot.com' # Public facing IP Address
 alias fixbrew='sudo chown -R `whoami`:admin'
-alias vi='nvim'
 
 #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
 #           displays paginated result with colored search terms and two lines surrounding each hit.             Example: mans mplayer codec

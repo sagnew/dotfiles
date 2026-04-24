@@ -56,6 +56,15 @@ au FileType make setlocal noexpandtab
 "Gets rid of trailing whitespace"
 autocmd BufWritePre * :%s/\s\+$//e
 
+"Auto close brackets""
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " Macros
 
 " Changes 'varName' to 'this.varName = varName;' from beginning of variable.
@@ -90,8 +99,9 @@ filetype off                   " required!
     Plugin 'VundleVim/Vundle.vim'
     " Awesome syntax checking
     Plugin 'Syntastic'
-    " Cool colorscheme
+    " Cool colorschemes
     Plugin 'altercation/vim-colors-solarized'
+    Plugin 'sainnhe/everforest'
     " Gnarly git stuff
     " Plugin 'https://github.com/tpope/vim-fugitive'
     " coffee script plugin
@@ -153,8 +163,8 @@ hi CursorColumn cterm=NONE ctermbg=0
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Set colorscheme
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme everforest
 " uncomment this line depending on terminal colors
 " let g:solarized_termcolors=256
 set nowrap
